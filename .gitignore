@@ -105,14 +105,19 @@ Desktop.ini
 
 
 
-# 忽略 data/SCUT-FBP5500/Images 目录下的所有文件
-data/SCUT-FBP5500/Images/*
-# 保留 data/SCUT-FBP5500/Images 目录本身
+# 忽略 data/SCUT-FBP5500/Images 下的具体文件类型，但保留目录
+data/SCUT-FBP5500/Images/**/*.jpg
+data/SCUT-FBP5500/Images/**/*.jpeg
+data/SCUT-FBP5500/Images/**/*.png
+data/SCUT-FBP5500/Images/**/*.bmp
+data/SCUT-FBP5500/Images/**/*.gif
 !data/SCUT-FBP5500/Images/
 
-# 忽略 models 目录下的所有文件
-models/*
-# 保留 models 目录本身
+# 对 models 目录做类似处理
+models/**/*.pth
+models/**/*.pt
+models/**/*.onnx
+models/**/*.pkl
 !models/
 
 
